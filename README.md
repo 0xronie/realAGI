@@ -7,7 +7,7 @@
 <h1 align="center"> (Real)AGI 🌐 </h1> 
 <p align="center"><strong>A very real AGI that can maybe help with options market predictions. maybe.</strong></p>
 
---- 
+---  
  
 ## 🤖 What is (Real)AGI?
 
