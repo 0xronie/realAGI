@@ -8,10 +8,10 @@
 <p align="center"><strong>A very real AGI that can maybe help with options market predictions. maybe.</strong></p>
 
 --- 
-
+ 
 ## 🤖 What is (Real)AGI?
 
-At its core, **(Real)AGI** is an autonomous trading assistant designed to look at the chaos of the options market, make sense of it, and try to guess where it's going next. Instead of just looking at basic stock charts, it processes live market data, news sentiment, and order flow to update its trading strategy on the fly. 
+**(Real)AGI** is an autonomous trading assistant designed help you make sense of a chaotic market and to help you predict where it's going next. Instead of just looking at basic stock charts, it processes live market data, news sentiment, and order flow to update its trading strategy on the fly. 
 
 Will it make you a billionaire? Maybe. Will it existential-crisis its way through a market crash? Also maybe.
 
