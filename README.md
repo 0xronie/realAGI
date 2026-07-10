@@ -1,65 +1,66 @@
-
 <p align="center">
 <div align="center">
-  <img src="https://i.ibb.co/s93x9RJw/HFa-M2q-WUAAihga.png" width="100"/>
+  <img src="https://i.ibb.co/fzxSyy47/Screenshot-2026-07-11-at-3-07-50-am.png" width="100"/>
 </div>
 </p>
 
 <h1 align="center"> (Real)AGI 🌐 </h1> 
-<p align="center"><strong>A very real AGI that can maybe help you with your predictions. maybe.</strong></p>
+<p align="center"><strong>A very real AGI that can maybe help with options market predictions. maybe.</strong></p>
 
 ---
 
-## 🤖 The AGI identity
+## 🤖 What is (Real)AGI?
 
-At its core, (real)AGI is an autonomous cognitive engine that operates beyond task-specific narrow AI. It maps high-dimensional sensory tokens directly into executable logical actions, treating environmental inputs as dynamic state spaces to be fully modeled, parsed, and mastered.
+At its core, **(Real)AGI** is an autonomous trading assistant designed to look at the chaos of the options market, make sense of it, and try to guess where it's going next. Instead of just looking at basic stock charts, it processes live market data, news sentiment, and order flow to update its trading strategy on the fly. 
 
-### 1. Belief Revision
-Instead of static classification, Regent maintains a continuous world model. It continuously updates its internal belief states about the environment ($H$) as real-time multi-modal tokens ($E$) are processed:
+Will it make you a billionaire? Maybe. Will it existential-crisis its way through a market crash? Also maybe.
 
-### 2. Policy Stability & Safety
-To guarantee operational reliability during long-horizon tasks, policy exploration is modeled as a discrete-time Martingale. This ensures the expected utility of future cognitive states remains balanced against current reward landscapes:
+### 1. Real-Time Market Adaptation
+Instead of sticking to a rigid formula, the agent maintains a live "world model" of the market. As fresh data ticks in (news, unusual options activity, macro data), it instantly updates its internal assumptions about market direction.
 
-If unintended reward hacking or drift is detected, the safety guardrail isolates execution to prevent alignment failures.
+### 2. Risk Management & Guardrails
+To keep the agent from going rogue and YOLO'ing your entire portfolio into 0DTE out-of-the-money calls, we’ve built in strict safety guardrails. If the market gets too erratic or the agent's confidence drops, it automatically locks down execution to prevent catastrophic losses.
 
-### 3. Cognitive Alignment
-To resolve discrepancies between its internal world model and reality, Regent evaluates the information loss across its neural layers using Kullback–Leibler (KL) Divergence. Low divergence confirms high understanding; high divergence triggers active exploration to close the information gap.
+### 3. Error Correction
+The agent constantly measures the gap between what it *thought* would happen and what *actually* happened in the market. If the gap is wide, it forces itself to recalibrate its strategy before placing the next trade.
 
 ---
 
-## 🧬 Core Architecture
+## 🧬 How It Thinks (Core Architecture)
 
-| Framework | Implementation | Purpose |
+| Component | What It Does | Why It Matters for Options |
 | :--- | :--- | :--- |
-| **Information Theory** | Shannon Entropy Reduction | Minimizing uncertainty across high-dimensional latent spaces. |
-| **Dynamical Systems** | Phase Space Reconstruction | Tracking and predicting complex, non-linear environment states. |
-| **Reinforcement Learning**| Temporal Difference (TD) Error | Direct policy optimization based on environmental reward signals. |
-| **Formal Systems** | First-Order Logic Invariants | Ensuring deterministic reasoning bounds inside neural models. |
+| **Uncertainty Reduction** | Sifts through market noise | Finds the actual signals hidden in high-volume option chains. |
+| **Trend Tracking** | Maps complex market cycles | Tries to predict momentum shifts and volatility spikes. |
+| **Learning Engine** | Learns from its mistakes | Adjusts its strategies based on successful or failed paper trades. |
+| **Safety Logic** | Hardcoded boundary rules | Ensures the AI never breaks your predefined risk parameters. |
 
 ---
 
 ## 🛠️ Technical Stack
 
-* **Z3 SMT Solver:** For verifying neural logic chains against structural safety constraints.
-* **Rust (Rayon & Tokio):** Parallelizing matrix math and cognitive memory retrieval.
-* **NATS JetStream:** High-speed (<5ms) state propagation across multi-agent neural nodes.
-* **gRPC / Protobuf:** Strictly typed schemas for multi-modal sensory input tensors.
+* **Z3 SMT Solver:** The ultimate math referee. It verifies that the AI's logic chains won't violate your risk constraints.
+* **Rust (Rayon & Tokio):** Blazing-fast execution engine to handle heavy data processing and memory retrieval without breaking a sweat.
+* **NATS JetStream:** Ultra-low latency (<5ms) data streaming to keep multi-agent nodes synced up.
+* **gRPC / Protobuf:** Fast, strictly typed data pipelines to feed raw market data into the AI model.
 
 ---
 
 ## 📲 Integration
 
-### Neural Inference & Action Loop
+### The Prediction & Action Loop
 
 ```rust
-let current_state = CognitiveState::fetch(agent_id);
-let sensory_input = RegentIngestor::perceive(vec![VISION_FEED, SENSORY_API]);
+// Check current portfolio exposure and pull live market data
+let current_portfolio = PortfolioState::fetch(agent_id);
+let market_data = MarketIngestor::perceive(vec![OPTIONS_CHAIN_FEED, NEWS_API]);
 
-// Revise world model using KL-Divergence guardrails
-let updated_state = current_state.apply_bayes(sensory_input)
-    .verify_logic_invariants() // Safety Check
-    .map_err(|e| RegentError::AlignmentMismatch(e))?;
+// Update the market model and run a quick sanity check against risk rules
+let updated_strategy = current_portfolio.update_beliefs(market_data)
+    .verify_risk_invariants() // Safety check to prevent blowing up the account
+    .map_err(|e| RegentError::RiskBoundaryViolation(e))?;
 
-if updated_state.confidence > 0.9999 {
-    Regent::execute_action(agent_id, updated_state.optimal_policy);
+// Only execute if the AI is extremely confident in the prediction
+if updated_strategy.confidence > 0.9999 {
+    Regent::execute_trade(agent_id, updated_strategy.optimal_order);
 }
