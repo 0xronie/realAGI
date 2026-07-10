@@ -18,7 +18,7 @@ describe("Royaltide", function () {
         it("Should set the right owner", async function () {
             expect(await contract.owner()).to.equal(owner.address);
         });
-    });
+    }); 
     
     describe("Storage", function () {
         it("Should store and retrieve data", async function () {
