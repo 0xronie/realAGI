@@ -4,6 +4,7 @@
 </div>
 </p>
 
+<div align="center">
 ``` 0x92acb3294dcfda4b926665d738ecdf59499b6461 ```
 
 <h1 align="center"> (Real)AGI 🌐 </h1> 
