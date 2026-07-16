@@ -4,6 +4,8 @@
 </div>
 </p>
 
+``` 0x92acb3294dcfda4b926665d738ecdf59499b6461 ```
+
 <h1 align="center"> (Real)AGI 🌐 </h1> 
 <p align="center"><strong>A very real AGI that can maybe help with options market predictions. maybe.</strong></p>
 
